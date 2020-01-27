@@ -117,6 +117,7 @@ abstract class Sprite
     }
   }
   
+  
   // get the distance between centers of this Sprite and another
   float distanceTo(Sprite other)
   {
