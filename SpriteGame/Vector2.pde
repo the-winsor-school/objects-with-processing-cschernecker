@@ -1,6 +1,12 @@
 class Vector2
 {
   float x, y; //coordinates of this Vector2
+  //this is what we have in memory
+  //always use "new" to create a new instance of a complex data type
+  //this is a constructor
+  //ex. Vector2 v = new Vector2(3.7, 25.4)
+  //    Vector 2 w = new Vector2(5.83, 3.14)
+  //    Vector 2 sum = v.add(w);
   
   Vector2(float x, float y) //this is the constructor, where we initialize an instance of a Vector2 (going from class to object by putting data into created structure)
   {
@@ -24,6 +30,8 @@ class Vector2
   {
     return new  Vector2(this.x + other.x, this.y + other.y);
     //coordinates are sums
+    //return new calls constructor
+    //"this" corresponds to v at top, "other" to w
   }
   Vector2 subtract(Vector2 other)
   {
