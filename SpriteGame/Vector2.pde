@@ -13,9 +13,38 @@ class Vector2
   
   //this Vector2 is the return type (describes output)
   //add is method name, other is the parameter
+  
+ // Vector2 sqrt()
+  {
+  //  return new Vector2(this.x * this.x + this.y * this.y);
+  // having issues with the magnitude calculations
+  }
+  
   Vector2 add(Vector2 other)
   {
-    return new  Vector2(this.x + other.x, this.y +other.y)
+    return new  Vector2(this.x + other.x, this.y + other.y);
     //coordinates are sums
+  }
+  Vector2 subtract(Vector2 other)
+  {
+    return new Vector2(this.x - other.x, this.y - other.y);
+  }
+   Vector2 inverse()
+  {
+    return new Vector2(this.x *-1, this.y *-1);
+  }
+ // Vector2 scale(double s)
+  {
+   // return new Vector2(this.x*s, this.y*s);
+   // not sure why this one isn't working
+  }
+  Vector2 perpendicular()
+  {
+    return new Vector2(this.x*-1, this.y);
+  }
+  Vector2 dotProduct(Vector2 other)
+  {
+   // return new Vector2(this.x*other.x*cosine(), this.y*other.y*cosine());
+   // don't know what to enter for theta
   }
 }

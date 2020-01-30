@@ -18,12 +18,12 @@ void draw()
 {
 
   background(255,255,255);
-  if () 
+ // if () 
   {
     background(100, 0, 200);
   }
   
-  else if ()
+ // else if ()
  {
    background(0,50, 200);
  }
