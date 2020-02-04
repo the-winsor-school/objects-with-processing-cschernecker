@@ -30,7 +30,7 @@ class Vector2
   {
     return new  Vector2(this.x + other.x, this.y + other.y);
     //coordinates are sums
-    //return new calls constructor
+    //"return new" calls constructor
     //"this" corresponds to v at top, "other" to w
   }
   Vector2 subtract(Vector2 other)
@@ -41,18 +41,28 @@ class Vector2
   {
     return new Vector2(this.x *-1, this.y *-1);
   }
- // Vector2 scale(double s)
+  
+  Vector2 scale(float s)
   {
-   // return new Vector2(this.x*s, this.y*s);
-   // not sure why this one isn't working
+   float newX = (float)(this.x*s);
+   float newY = (float)(this.y*s);
+   return new Vector2(newX, newY);
   }
   Vector2 perpendicular()
   {
     return new Vector2(this.x*-1, this.y);
   }
-  Vector2 dotProduct(Vector2 other)
+  
+  float dotProduct(Vector2 other)
   {
-   // return new Vector2(this.x*other.x*cosine(), this.y*other.y*cosine());
-   // don't know what to enter for theta
+   //float prod = this.x*other.x + this.y*other.y;
+   //return prod;
+   //or
+   return this.x*other.x + this.y*other.y;
+  }
+  
+  float magnitude()
+  {
+    //?return sqrt(x*other.x +y*other.y);
   }
 }
