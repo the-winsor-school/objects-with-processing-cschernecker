@@ -49,6 +49,6 @@ class Blob extends Sprite
   void drawSprite()
   {
     fill(myColor);
-    ellipse(x, y, radius, radius);
+    ellipse(location.x, location.y, radius, radius);
   }
 }

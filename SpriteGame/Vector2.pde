@@ -1,6 +1,7 @@
 class Vector2
 {
-  float x, y; //coordinates of this Vector2
+  float x, y; 
+  //coordinates of this Vector2
   //this is what we have in memory
   //always use "new" to create a new instance of a complex data type
   //this is a constructor
@@ -20,10 +21,9 @@ class Vector2
   //this Vector2 is the return type (describes output)
   //add is method name, other is the parameter
   
- // Vector2 sqrt()
+  float magnitude()
   {
-  //  return new Vector2(this.x * this.x + this.y * this.y);
-  // having issues with the magnitude calculations
+    return sqrt(x*x + y * y);
   }
   
   Vector2 add(Vector2 other)
@@ -33,10 +33,12 @@ class Vector2
     //"return new" calls constructor
     //"this" corresponds to v at top, "other" to w
   }
+  
   Vector2 subtract(Vector2 other)
   {
     return new Vector2(this.x - other.x, this.y - other.y);
   }
+  
    Vector2 inverse()
   {
     return new Vector2(this.x *-1, this.y *-1);
@@ -48,9 +50,18 @@ class Vector2
    float newY = (float)(this.y*s);
    return new Vector2(newX, newY);
   }
+  
   Vector2 perpendicular()
   {
     return new Vector2(this.x*-1, this.y);
+  }
+  
+  Vector2 unitVector()
+  {
+    float unitX = (float)(this.x/this.magnitude());
+    float unitY = (float)(this.y/this.magnitude());
+    return new Vector2(unitX, unitY);
+    
   }
   
   float dotProduct(Vector2 other)
@@ -61,8 +72,8 @@ class Vector2
    return this.x*other.x + this.y*other.y;
   }
   
-  float magnitude()
+  //Vector2 angleBetween()
   {
-    //?return sqrt(x*other.x +y*other.y);
+    
   }
 }
